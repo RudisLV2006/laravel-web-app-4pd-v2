@@ -10,7 +10,8 @@ use Illuminate\Support\Facades\Auth;
 class CommentController extends Controller
 {
     public function store(Request $request, Post $post)
-    {
+    {  
+        \Log::debug($request);
         $request->validate([
             'content' => 'required|string'
         ]);
