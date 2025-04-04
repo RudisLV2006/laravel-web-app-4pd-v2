@@ -30,4 +30,7 @@ class CommentController extends Controller
 
         return redirect()->back()->with('success', 'Comment added successfully!');
     }
+    public function delete(Comment $comments){
+        
+    }
 }
