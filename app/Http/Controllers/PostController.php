@@ -47,6 +47,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        $statuses = PostStatus::get();
         return view('post.create', ['statuses' => $statuses]);
     }
 
