@@ -25,7 +25,7 @@
                                 </h2>
 
                                 <h3>by {{ $comment->user->name }}</h3>
-                                <p>{{ $comment->content }}</p>                         
+                                <p>{{ $comment->content }}</p>              
                             </li>
                         @endforeach
                         </ul>
