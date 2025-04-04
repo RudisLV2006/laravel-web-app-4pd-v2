@@ -48,7 +48,7 @@
                         </div>
                     @endforeach
 
-                    <form action="{{ route('comments.store') }}" method="post">
+                    <form action="{{ route('comments.store', $post) }}" method="post">
                         @csrf
                         <div>
                             <textarea
