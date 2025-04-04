@@ -16,10 +16,12 @@ class CommentController extends Controller
             'content' => 'required|string'
         ]);
 
-        $post->create([
-            'user_id' => Auth::id(),
-            'content' => $request->content
-        ]);
+        $request->user()->comments()->create(
+            [
+                "content"=>$request->content,
+                "post_id"=>$post->id
+            ]
+        );
 
         return redirect()->back()->with('success', 'Comment added successfully!');
     }
