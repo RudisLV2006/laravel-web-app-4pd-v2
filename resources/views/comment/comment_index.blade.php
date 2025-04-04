@@ -14,7 +14,7 @@
                             @foreach($comments as $comment)
                             <li>
                                 <h2>
-                                    <a href="{{ route('posts.show', $comment->post->id) }}">
+                                    <a href="{{ route('posts.show', $comment->post->id) }}" style="font-size: 25px">
                                         {{ $comment->post->title }}
                                     </a>
                                     <p>Author: {{ $comment->post->user->name }}</p>
