@@ -14,10 +14,10 @@
                             @foreach($comments as $comment)
                             <li>
                                 <h2>
-                                    <a href="{{ route('posts.show', $post->id) }}">
-                                        {{ $commen->post->title }}
+                                    <a href="{{ route('posts.show', $comment->post->id) }}">
+                                        {{ $comment->post->title }}
                                     </a>
-                                    @if ($commen->post->isPrivate)
+                                    @if ($comment->post->isPrivate)
                                         <span class="inline-block bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
                                             private
                                         </span>
