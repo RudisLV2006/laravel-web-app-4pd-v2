@@ -32,7 +32,7 @@ class CommentController extends Controller
 
         return redirect()->back()->with('success', 'Comment added successfully!');
     }
-    public function destroy(Comment $comment){
+    public function destroy(Post $post,Comment $comment){
         Gate::authorize('delete', $comment);
         $comment->delete();
         return redirect()->route('comments.index')->with('success', 'Comment deleted successfully.');
