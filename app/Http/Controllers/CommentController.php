@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Auth;
 class CommentController extends Controller
 {
     public function index(){
+        \Log::debug("i am here");
         $comments = Comments::with("post")->get();
-        return view("comment.comment_index", ["comments"=>$comments]);
+        return view('comment.index', ["comments"=>$comments]);
     }
     public function store(Request $request, Post $post)
     {  
